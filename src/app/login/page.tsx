@@ -106,11 +106,14 @@ export default function LoginPage() {
           onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
         />
         <div>
-          <div style={{ fontSize: '1.125rem', fontWeight: 700, color: '#003B73', lineHeight: 1.2, letterSpacing: '0.02em' }}>
-            INDIAN DIGITAL EVIDENCE UNIT
+          <div style={{ fontSize: '1.25rem', fontWeight: 800, color: '#003B73', lineHeight: 1.15, letterSpacing: '0.03em' }}>
+            TRACE
+          </div>
+          <div style={{ fontSize: '0.8125rem', fontWeight: 600, color: '#003B73', marginTop: '1px' }}>
+            Trusted Record & Chain of Evidence
           </div>
           <div style={{ fontSize: '0.6875rem', color: '#4B5563', marginTop: '1px' }}>
-            Central Cyber Crime Division &nbsp;|&nbsp; Ministry of Home Affairs
+            Digital Evidence Management Platform
           </div>
         </div>
         <div style={{ marginLeft: 'auto' }}>

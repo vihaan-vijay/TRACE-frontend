@@ -19,13 +19,13 @@ interface NavItem {
 
 const NAV_ITEMS: NavItem[] = [
   { href: '/dashboard', label: 'Dashboard', icon: <LayoutDashboard size={18} /> },
-  { href: '/cases', label: 'Cases', icon: <FolderOpen size={18} />, hasChevron: true },
-  { href: '/verification', label: 'Verification', icon: <ShieldCheck size={18} /> },
+  { href: '/cases', label: 'Case Files', icon: <FolderOpen size={18} />, hasChevron: true },
+  { href: '/verification', label: 'Evidence Check', icon: <ShieldCheck size={18} /> },
   { href: '/reports', label: 'Reports', icon: <FileText size={18} />, hasChevron: true },
-  { href: '/court-packages', label: 'Court Packages', icon: <Gavel size={18} />, hasChevron: true },
-  { href: '/audit', label: 'Audit Logs', icon: <ScrollText size={18} /> },
-  { href: '/notifications', label: 'Notifications', icon: <Bell size={18} /> },
-  { href: '/investigators', label: 'Users & Roles', icon: <Users size={18} /> },
+  { href: '/court-packages', label: 'Court Bundles', icon: <Gavel size={18} />, hasChevron: true },
+  { href: '/audit', label: 'Audit Trail', icon: <ScrollText size={18} /> },
+  { href: '/notifications', label: 'Alerts', icon: <Bell size={18} /> },
+  { href: '/investigators', label: 'Officer Roles', icon: <Users size={18} /> },
   { href: '/settings', label: 'Settings', icon: <Settings size={18} /> },
   { href: '/settings', label: 'Help & Support', icon: <HelpCircle size={18} /> },
 ];
@@ -48,7 +48,7 @@ export default function Sidebar({
 
   const isActive = (href: string, label: string) => {
     if (label === 'Dashboard') return pathname === '/dashboard';
-    if (label === 'Audit Logs') return pathname.startsWith('/audit');
+    if (label === 'Audit Trail' || label === 'Audit Logs' || label === 'Chain of Custody Logs') return pathname.startsWith('/audit');
     return pathname.startsWith(href);
   };
 

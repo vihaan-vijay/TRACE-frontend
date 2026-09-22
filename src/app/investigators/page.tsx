@@ -109,7 +109,7 @@ export default function InvestigatorsPage() {
   });
 
   return (
-    <DashboardLayout title="Investigators & Officers" subtitle="Directory of registered personnel and investigators">
+    <DashboardLayout title="Officer Roles" subtitle="Directory of registered officers and access permissions">
       <div style={{ width: '100%', maxWidth: '1400px', margin: '0 auto' }}>
         {/* Search & Filters */}
         <div className="animate-fade-in" style={{

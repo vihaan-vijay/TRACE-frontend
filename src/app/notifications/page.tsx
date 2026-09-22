@@ -18,7 +18,7 @@ export default function NotificationsPage() {
   if (!mounted) return null;
 
   return (
-    <DashboardLayout title="Notifications" subtitle="Stay updated on important events">
+    <DashboardLayout title="Alerts" subtitle="Stay updated on important case events & deadlines">
       <div style={{ width: '100%', maxWidth: '800px', margin: '0 auto' }}>
         {/* Tab bar */}
         <div className="animate-fade-in" style={{

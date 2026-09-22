@@ -95,7 +95,7 @@ export default function AuditPage() {
   });
 
   return (
-    <DashboardLayout title="Audit Log" subtitle="Immutable system activity history">
+    <DashboardLayout title="Audit Trail" subtitle="Immutable forensic activity & access history">
       <div style={{ width: '100%', maxWidth: '1400px', margin: '0 auto' }}>
         {/* Info banner */}
         <div className="animate-fade-in" style={{

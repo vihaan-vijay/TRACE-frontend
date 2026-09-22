@@ -80,7 +80,7 @@ export default function ReportsPage() {
   );
 
   return (
-    <DashboardLayout title="Reports & Inventories" subtitle="Generate, download, and manage forensic reports">
+    <DashboardLayout title="Reports" subtitle="Generate, download, and manage forensic reports">
       <div style={{ width: '100%', maxWidth: '1400px', margin: '0 auto' }}>
         {/* Actions */}
         <div className="animate-fade-in" style={{

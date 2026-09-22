@@ -107,7 +107,7 @@ export default function CourtPackagesPage() {
   ];
 
   return (
-    <DashboardLayout title="Court Packages" subtitle="Build court-ready evidence packages">
+    <DashboardLayout title="Court Bundles" subtitle="Build certified court-ready evidence packages">
       <div style={{ width: '100%', maxWidth: '900px', margin: '0 auto' }}>
         {/* Stepper */}
         <div className="ev-card animate-fade-in" style={{ marginBottom: '1.25rem', padding: '1rem 1.5rem' }}>

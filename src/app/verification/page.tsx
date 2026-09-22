@@ -64,7 +64,7 @@ export default function VerificationPage() {
   const mismatchedCount = evidenceItems.filter(e => e.status === 'Mismatched').length;
 
   return (
-    <DashboardLayout title="Verification Queue" subtitle="Review and verify evidence integrity">
+    <DashboardLayout title="Evidence Check" subtitle="Review and verify cryptographic evidence integrity">
       <div style={{ width: '100%', maxWidth: '1400px', margin: '0 auto' }}>
         {/* Stats */}
         <div style={{

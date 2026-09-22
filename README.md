@@ -1,5 +1,5 @@
-# 💻 TRACE Frontend - Trusted Records & Case Evidence
-### Team Invictus | Smart India Hackathon 2026
+# 💻 Frontend Module (`/frontend`)
+### Owner: Selvakumar246 (Frontend Engineer)
 
 ---
 

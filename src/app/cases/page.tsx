@@ -161,7 +161,7 @@ export default function CasesPage() {
   };
 
   return (
-    <DashboardLayout title="Cases" subtitle="Manage investigation cases">
+    <DashboardLayout title="Case Files" subtitle="Manage and track investigation case files">
       <div style={{ width: '100%', maxWidth: '1400px', margin: '0 auto', position: 'relative' }}>
         {/* 5-Second Undo Banner */}
         {undoCase && (

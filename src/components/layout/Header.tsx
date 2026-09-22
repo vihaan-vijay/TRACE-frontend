@@ -63,32 +63,33 @@ export default function Header({ title, subtitle }: HeaderProps) {
         {/* Title */}
         <div>
           <div className="header-title-main" style={{
-            fontSize: '1.25rem',
-            fontWeight: 700,
+            fontSize: '1.35rem',
+            fontWeight: 800,
             color: '#003B73',
-            lineHeight: 1.15,
-            letterSpacing: '0.02em',
+            lineHeight: 1.1,
+            letterSpacing: '0.04em',
             fontFamily: 'var(--font-sans)',
           }}>
-            INDIAN DIGITAL
+            TRACE
           </div>
           <div className="header-title-sub" style={{
-            fontSize: '1.25rem',
-            fontWeight: 700,
+            fontSize: '0.8125rem',
+            fontWeight: 600,
             color: '#003B73',
-            lineHeight: 1.15,
-            letterSpacing: '0.02em',
+            lineHeight: 1.25,
+            letterSpacing: '0.01em',
             fontFamily: 'var(--font-sans)',
+            marginTop: '1px',
           }}>
-            EVIDENCE UNIT
+            Trusted Record & Chain of Evidence
           </div>
           <div className="header-dept" style={{
             fontSize: '0.6875rem',
             color: '#4B5563',
             marginTop: '2px',
-            fontWeight: 400,
+            fontWeight: 500,
           }}>
-            Central Cyber Crime Division
+            Digital Evidence Management Platform
           </div>
         </div>
       </div>
