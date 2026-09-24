@@ -12,8 +12,8 @@ export default function LoginPage() {
   const { login, isAuthenticated, error, clearError, isLoading } = useAuth();
   const router = useRouter();
 
-  const [identifier, setIdentifier] = useState('determination');
-  const [password, setPassword] = useState('123');
+  const [identifier, setIdentifier] = useState('');
+  const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [authStage, setAuthStage] = useState(0);

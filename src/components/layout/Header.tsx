@@ -187,12 +187,12 @@ export default function Header({ title, subtitle }: HeaderProps) {
                 fontSize: '0.8125rem', fontWeight: 600,
                 color: '#172033', lineHeight: 1.2,
               }}>
-                {user?.fullName || 'Inspector Determination'}
+                {user?.fullName || 'Authorized Officer'}
               </div>
               <div style={{
                 fontSize: '0.6875rem', color: '#697386',
               }}>
-                {user?.role || 'Supervisor'}
+                {user?.role || 'Officer'}
               </div>
             </div>
             <ChevronDown size={14} color="#697386" className="header-chevron" />

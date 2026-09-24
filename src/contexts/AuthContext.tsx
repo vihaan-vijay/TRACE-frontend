@@ -67,26 +67,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setIsLoading(true);
     setError(null);
 
-    // Default UI testing credentials shortcut
-    if (identifier.trim().toLowerCase() === 'determination' && password === '123') {
-      const mockUser: User = {
-        id: 'usr-determination-001',
-        email: 'determination@evidentia.gov.in',
-        fullName: 'Inspector Determination',
-        badgeNumber: 'EVD-001',
-        role: 'SUPERVISOR',
-        department: 'Central Cyber Crime Division',
-        securityClearance: 5,
-      };
-      const mockToken = 'mock_jwt_token_determination_123';
-      setToken(mockToken);
-      setUser(mockUser);
-      localStorage.setItem('ev-token', mockToken);
-      localStorage.setItem('ev-user', JSON.stringify(mockUser));
-      setIsLoading(false);
-      return;
-    }
-
     try {
       const res = await fetch(`${API_BASE}/api/v1/auth/login`, {
         method: 'POST',
@@ -95,28 +75,21 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       });
       const data = await res.json();
       if (!res.ok) {
-        throw new Error(data.message || 'Login failed');
+        throw new Error(data.message || 'Invalid credentials.');
       }
       setToken(data.token);
       setUser(data.user);
       localStorage.setItem('ev-token', data.token);
       localStorage.setItem('ev-user', JSON.stringify(data.user));
     } catch (err: unknown) {
-      // Fallback for UI testing if backend server is not running
-      const mockUser: User = {
-        id: `usr-${Date.now()}`,
-        email: `${identifier.toLowerCase()}@evidentia.gov.in`,
-        fullName: identifier.charAt(0).toUpperCase() + identifier.slice(1),
-        badgeNumber: 'EVD-8891',
-        role: 'SUPERVISOR',
-        department: 'Central Crime Investigation Branch',
-        securityClearance: 4,
-      };
-      const mockToken = `mock_jwt_token_${Date.now()}`;
-      setToken(mockToken);
-      setUser(mockUser);
-      localStorage.setItem('ev-token', mockToken);
-      localStorage.setItem('ev-user', JSON.stringify(mockUser));
+      // Fail-closed: Never manufacture fallback or simulated sessions
+      const message = err instanceof Error ? err.message : 'Authentication failed. Please check credentials or server connection.';
+      setError(message);
+      setUser(null);
+      setToken(null);
+      localStorage.removeItem('ev-token');
+      localStorage.removeItem('ev-user');
+      throw err;
     } finally {
       setIsLoading(false);
     }
